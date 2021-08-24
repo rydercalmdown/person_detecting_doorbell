@@ -7,6 +7,10 @@ from rtsparty import Stream
 from objectdaddy import Daddy
 
 
+logging.basicConfig()
+logging.getLogger('logger').setLevel(logging.INFO)
+
+
 class Doorbell():
 
     def __init__(self):

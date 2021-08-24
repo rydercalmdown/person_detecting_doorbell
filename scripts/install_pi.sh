@@ -11,9 +11,9 @@ sudo apt-get install -y ffmpeg mpg321 \
 
 cd ../
 
-python -m pip install virtualenv
+python3 -m pip install virtualenv
 
-python -m virtualenv -p python3 env
+python3 -m virtualenv -p python3 env
 . env/bin/activate
 pip install --upgrade pip setuptools wheel
 pip install -r src/requirements.txt
