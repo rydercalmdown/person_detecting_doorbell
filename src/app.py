@@ -50,7 +50,8 @@ class Doorbell():
         logging.info('Ringing doorbell')
         base_dir = os.path.dirname(os.path.realpath(__file__))
         doorbell_audio = os.path.join(base_dir, 'audio/doorbell.mp3')
-        subprocess.call(['mpg321', doorbell_audio])
+        subprocess.call(['mpg321', doorbell_audio], stdout=subprocess.DEVNULL,
+            stderr=subprocess.STDOUT)
 
     def doorbell_listener(self):
         """Listens for the change of self.person_at_door"""
